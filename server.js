@@ -1,6 +1,9 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const bodyParser= require('body-parser');
+const path = require('path')
+
+
 const app = express();
 
 app.use(bodyParser.urlencoded({
@@ -15,12 +18,6 @@ const conn = connectDB();
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Origin,X-auth-token, X-Requested-With, Content-Type, Accept");
-  next();
-});
 
 // Define Routes
 app.use('/api/users', require('./routes/users'));
