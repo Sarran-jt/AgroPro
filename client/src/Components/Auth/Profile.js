@@ -46,7 +46,7 @@ const Profile = () => {
                         <input type="text" name="city" className="form-control" id="city" value={user.city}  required />
                         <div className="validate"></div>
                         </div>
-                        <div className="col-md-12 form-group">
+                        <div className="col-md-1 2 form-group">
                         <label for="city">Profession</label>
                         <input type="text" name="profession" className="form-control" id="propfession" value={user.profession}  />
                         <div className="validate"></div>
