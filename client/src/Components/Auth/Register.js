@@ -77,7 +77,7 @@ const Register = (props) => {
                 </div>
                 <div className="row">
                 <div className="col-md-6 mb-5 mb-md-10" data-aos="fade-up">
-                    <form action="forms/contact.php" method="post" role="form" className="php-email-form" onSubmit={onSubmit}>
+                    <form className="php-email-form" onSubmit={onSubmit}>
                     <div className="row">
                         <div className="col-md-12 form-group">
                         <label for="name">Name</label>

@@ -9,90 +9,75 @@ const Profile = () => {
     const {user}=authContext;
     if(user){
     return (
-        <div className="container">
-            <div className="row my-5">
-                <div className="col-lg-4">
-                    <div className="card card-cascade narrower">
-                        <div className="view view-cascade gradient-card-header mdb-color lighten-3">
-                         {/* <h5 className="mb-0 font-weight-bold">Edit Photo</h5> */}
-                        </div>
-                        <div className="card-body card-body-cascade text-center">
-                        <img src={user.img} alt="User Photo" className="z-depth-1 mb-3 mx-auto" />
-                        <p className="text-muted"><small>Profile photo</small></p>
-                        <div className="row flex-center">
-                            {/* <button className="btn btn-warning btn-rounded btn-sm">Upload New Photo</button><br/> */}
-                            {/* <button className="btn btn-danger btn-rounded btn-sm">Delete</button> */}
-                        </div>
-                        </div>
-                    </div>
+        <div>
+            <div className="site-section pb-0 site-portfolio">
+            <div className="container">
+                <div className="row mb-5 align-items-end">
+                <div className="col-md-6" data-aos="fade-up">
+                    <h2>My Profile</h2>
                 </div>
-                <div className="col-lg-8">
-                <div className="card card-cascade narrower">
-                        <div className="view view-cascade gradient-card-header mdb-color lighten-3">
-                        {/* <h5 className="mb-0 font-weight-bold">Edit Account</h5> */}
-                        </div>
-                        <div className="card-body card-body-cascade text-center">
-                        <form>
-                            <div className="row">
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="text" id="form1" className="form-control validate"  disabled/>
-                                <label for="form1" data-error="wrong" data-success="right">Name : {user.name}</label>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="text" id="form2" className="form-control validate" disabled/>
-                                <label for="form2" data-error="wrong" data-success="right">Email : {user.email}</label>
-                                </div>
-                            </div>
-                            </div>
-                            <div className="row">
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="tel" id="form81" className="form-control validate" disabled/>
-                                <label for="form81" data-error="wrong" data-success="right">Phone : {user.number}</label>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="text" id="form82" className="form-control validate" disabled/>
-                                <label for="form82" data-error="wrong" data-success="right">Profession : {user.profession}</label>
-                                </div> 
-                            </div>
-                            </div>
-                            <div className="row">
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="email" id="form76" className="form-control validate" value={user.address} disabled/>
-                                <label for="form76"> </label>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="text" id="form77" className="form-control validate" disabled/>
-                                <label for="form77" data-error="wrong" data-success="right">City : {user.city}</label>
-                                </div>
-                            </div>
-                            </div>
-                            <div className="row">
-                            <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                <input type="email" id="form78" className="form-control validate" disabled/>
-                                <label for="form76">Pincode : {user.pincode}</label>
-                                </div>
-                            </div>
-                           
-                            </div>
-                            <div className="row">
-                            <div className="col-md-12 text-center my-4">
-                                <Link to='/profile/edit' type="button" class="btn btn-warning">Edit Profile</Link>
-                            </div>
-                            </div>
-                        </form>
-                        </div>
-                    </div>
                 </div>
+                <div className="row">
+                <div className="col-md-6 mb-5 mb-md-10" data-aos="fade-up">
+                    <form className="php-email-form">
+                    <div className="row">
+                        <div className="col-md-12 form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" className="form-control" id="name" value={user.name}  data-rule="minlen:4" data-msg="Please enter at least 4 chars" required autofocus/>
+                        <div className="validate"></div>
+                        </div>
+                        <div className="col-md-12 form-group">
+                        <label for="name">Email</label>
+                        <input type="email" className="form-control" name="email" id="email" value={user.email}  data-rule="email" data-msg="Please enter a valid email" required />
+                        <div className="validate"></div>
+                        </div>
+                        <div className="col-md-12 form-group">
+                        <label for="number">Phone</label>
+                        <input type="tel" name="number" className="form-control" id="number" value={user.number}  data-rule="minlen:10" data-msg="Please enter a valid Phone Number" required/>
+                        <div className="validate"></div>
+                        </div>
+                        <div className="col-md-12 form-group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" className="form-control" id="address" value={user.address}  data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
+                        <div className="validate"></div>
+                        </div>
+                        <div className="col-md-12 form-group">
+                        <label for="city">City</label>
+                        <input type="text" name="city" className="form-control" id="city" value={user.city}  required />
+                        <div className="validate"></div>
+                        </div>
+                        <div className="col-md-12 form-group">
+                        <label for="city">Profession</label>
+                        <input type="text" name="profession" className="form-control" id="propfession" value={user.profession}  />
+                        <div className="validate"></div>
+                        </div>
+                        <div className="col-md-12 form-group">
+                        <label for="pincode">Pincode</label>
+                        <input type="number" name="pincode" className="form-control" id="pincode" value={user.pincode}  data-rule="minlen:6" data-msg="Please enter at least 6 chars" required />
+                        <div className="validate"></div>
+                        </div>
+                        {/* <div class="col-md-12 input-group mb-5">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+                          </div>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                              aria-describedby="inputGroupFileAddon01" onChange={ImageChange} />
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                          </div>
+                        </div>*/}
+                        <div className="col-md-6 form-group">
+                        <Link to='/profile/edit' className="readmore d-block w-100 mt-5">Edit Profile</Link>
+                        </div> 
+                    </div>
+                    </form>
+                </div>
+                <div className="col-md-4 order-2" data-aos="fade-up">
+                <p><img src={user.img} alt="Image" class="img-fluid"/></p>
+                {/* <Link to='/profile/edit'><button className='btn btn-elegant'>Edit Profile</button></Link> */}
+                </div>
+                </div>
+            </div>
             </div>
         </div>
     )
