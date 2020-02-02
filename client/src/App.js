@@ -66,7 +66,7 @@ function App(){
           <Route exact path='/myads' component={MyAds} />
           <Route exact path='/image' component={Image} />
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
       </AddState>
       </AlertState>

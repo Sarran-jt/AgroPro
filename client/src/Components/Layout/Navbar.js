@@ -15,7 +15,7 @@ const Navbar = () => {
     const authLinks = (
         <Fragment>
             <li><Link to='/profile'>My Profile</Link></li>
-            <li><Link to  onClick={logout}>Logout</Link></li>
+            <li><Link to='/' onClick={logout}>Logout</Link></li>
             <li><Link to='/myads'>My Ads</Link></li>
             <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">

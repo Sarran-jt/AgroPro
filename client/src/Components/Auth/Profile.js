@@ -73,7 +73,7 @@ const Profile = () => {
                     </form>
                 </div>
                 <div className="col-md-4 order-2" data-aos="fade-up">
-                <p><img src={user.img} alt="Image" class="img-fluid"/></p>
+                <p><img src={user.img} alt="Image" height="300px" width="400px" class="img-fluid"/></p>
                 {/* <Link to='/profile/edit'><button className='btn btn-elegant'>Edit Profile</button></Link> */}
                 </div>
                 </div>

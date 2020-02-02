@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React, { useState, useContext, useEffect } from 'react';
+import Spinner from '../Layout/Spinner';
 import AuthContext from '../../Context/auth/authContext';
 import AlertContext from '../../Context/alert/alertContext';
 
@@ -37,10 +38,12 @@ const Login = (props) => {
         if (email === '' || password === '') {
         setAlert('Please fill in all fields', 'danger');
         } else {
-        login({
+        while(login({
             email,
             password
-        });
+        })){
+            return <Spinner />;
+        }
         }
     };
 
