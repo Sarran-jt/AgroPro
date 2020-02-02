@@ -23,37 +23,37 @@ const Profile = () => {
                     <div className="row">
                         <div className="col-md-12 form-group">
                         <label for="name">Name</label>
-                        <input type="text" name="name" className="form-control" id="name" value={user.name}  data-rule="minlen:4" data-msg="Please enter at least 4 chars" required autofocus/>
+                        <input type="text" name="name" className="form-control" id="name" value={user.name}  data-rule="minlen:4" data-msg="Please enter at least 4 chars" disabled required autofocus/>
                         <div className="validate"></div>
                         </div>
                         <div className="col-md-12 form-group">
                         <label for="name">Email</label>
-                        <input type="email" className="form-control" name="email" id="email" value={user.email}  data-rule="email" data-msg="Please enter a valid email" required />
+                        <input type="email" className="form-control" name="email" id="email" value={user.email}  data-rule="email" data-msg="Please enter a valid email" disabled required />
                         <div className="validate"></div>
                         </div>
                         <div className="col-md-12 form-group">
                         <label for="number">Phone</label>
-                        <input type="tel" name="number" className="form-control" id="number" value={user.number}  data-rule="minlen:10" data-msg="Please enter a valid Phone Number" required/>
+                        <input type="tel" name="number" className="form-control" id="number" value={user.number}  data-rule="minlen:10" data-msg="Please enter a valid Phone Number" disabled required/>
                         <div className="validate"></div>
                         </div>
                         <div className="col-md-12 form-group">
                         <label for="address">Address</label>
-                        <input type="text" name="address" className="form-control" id="address" value={user.address}  data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
+                        <input type="text" name="address" className="form-control" id="address" value={user.address}  data-rule="minlen:4" data-msg="Please enter at least 4 chars" disabled required />
                         <div className="validate"></div>
                         </div>
                         <div className="col-md-12 form-group">
                         <label for="city">City</label>
-                        <input type="text" name="city" className="form-control" id="city" value={user.city}  required />
+                        <input type="text" name="city" className="form-control" id="city" value={user.city} disabled required />
                         <div className="validate"></div>
                         </div>
                         <div className="col-md-12 form-group">
                         <label for="city">Profession</label>
-                        <input type="text" name="profession" className="form-control" id="propfession" value={user.profession}  />
+                        <input type="text" name="profession" className="form-control" id="propfession" value={user.profession} disabled />
                         <div className="validate"></div>
                         </div>
                         <div className="col-md-12 form-group">
                         <label for="pincode">Pincode</label>
-                        <input type="number" name="pincode" className="form-control" id="pincode" value={user.pincode}  data-rule="minlen:6" data-msg="Please enter at least 6 chars" required />
+                        <input type="number" name="pincode" className="form-control" id="pincode" value={user.pincode}  data-rule="minlen:6" data-msg="Please enter at least 6 chars" required disabled />
                         <div className="validate"></div>
                         </div>
                         {/* <div class="col-md-12 input-group mb-5">
