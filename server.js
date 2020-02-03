@@ -40,9 +40,9 @@ if(process.env.NODE_ENV === 'production'){
 
   app.get('*', (req,res) => {
     res.sendFile(path.join(__dirname, '/client/build/index.html'))
-    if(err){
-      res.status(500).send("pool");
-    }
+    // if(err){
+    //   res.status(200).send(err);
+    // }
   });
 }
 
