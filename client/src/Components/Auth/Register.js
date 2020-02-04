@@ -124,7 +124,7 @@ const Register = (props) => {
                         <input type="password" className="form-control" name="confirmPassword" id="confirmPassword" value={confirmPassword}  onChange={onChange} data-rule="minlen:6" data-msg="Please enter atleast 6 characters" required />
                         <div className="validate"></div>
                         </div>
-                        <div class="col-md-12 input-group mb-5">
+                        {/* <div class="col-md-12 input-group mb-5">
                           <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
                           </div>
@@ -133,11 +133,11 @@ const Register = (props) => {
                               aria-describedby="inputGroupFileAddon01" onChange={ImageChange} />
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                           </div>
-                        </div>
+                        </div>*/}
                         <div className="col-md-6 form-group">
                         <input type="submit" className="readmore d-block w-100" value="Sign Up"/>
-                        </div>
-                    </div>
+                        </div> 
+                    </div> 
                     </form>
                 </div>
                 <div className="col-md-4 order-2" data-aos="fade-up">

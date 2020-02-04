@@ -10,6 +10,9 @@ const CommentSchema = mongoose.Schema({
     userName:{
         type:String
     },
+    img:{
+        type:String
+    },
     post:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'forumPosts'

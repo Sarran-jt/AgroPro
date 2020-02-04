@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json({limit: "100mb"}));
 
 // Connect Database
-const conn = connectDB();
+connectDB();
 
 // Init Middleware
 app.use(express.json({ extended: false }));

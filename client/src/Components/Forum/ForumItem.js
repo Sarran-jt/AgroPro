@@ -2,6 +2,7 @@
 import React,{useContext,Fragment,useEffect,useState} from 'react'
 import PostContext from '../../Context/forum/postContext';
 import AuthContext from '../../Context/auth/authContext';
+import Spinner from '../Layout/Spinner';
 import Moment from 'react-moment';
 
 
@@ -57,7 +58,8 @@ const ForumItem = (props) => {
     const dateToFormat = '1976-04-19T12:59-0500';
     const date='2020-01-18T14:35:26.392Z';
 
-  
+// if(loading) return <Spinner />; 
+// else{  
     return (
         <div>
             { 
@@ -91,7 +93,7 @@ const ForumItem = (props) => {
                     </div>
                     {comments.map(comment => (
                     <div className="media mb-4">
-                    <img className="d-flex mr-3 rounded-circle" src="http://cdn.onlinewebfonts.com/svg/img_568657.png" width="50px" height="50px" alt=""></img>
+                    <img className="d-flex mr-3 rounded-circle" src={comment.img} width="50px" height="50px" alt=""></img>
                     <div className="media-body">
                         <h5 className="mt-0"> {comment.userName} </h5>
                         {user && user._id === comment.user && commentLinks(comment)}
@@ -108,6 +110,7 @@ const ForumItem = (props) => {
             ))}
         </div>
     )
+    // }
 }
 
 export default ForumItem;

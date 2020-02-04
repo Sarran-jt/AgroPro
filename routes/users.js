@@ -29,9 +29,9 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password,number,address,city,pincode,profession,img } = req.body;
+    const { name, email, password,number,address,city,pincode,profession } = req.body;
 
-    (img=="")&&(img="http://cdn.onlinewebfonts.com/svg/img_568657.png")
+    let img="http://cdn.onlinewebfonts.com/svg/img_568657.png";
 
     try {
       let user = await User.findOne({ email });
@@ -87,9 +87,6 @@ router.post(
     }
   }
 );
-
-
-
 
 
 router.put('/:id', auth, async (req, res) => {

@@ -182,7 +182,8 @@ router.post(
           text,
           post: req.params.id,
           userName: req.user.name,
-          user: req.user.id
+          user: req.user.id,
+          img:req.user.img
         });
   
         const comment = await newComment.save();

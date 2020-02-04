@@ -58,7 +58,7 @@ router.post(
           number:user.number,
           email:user.email,
           city:user.city,
-          // img:user.img
+          img:user.img
         }
       };
 
