@@ -24,7 +24,7 @@ const AddState=(props)=>{
     
     const getAdds=async ()=>{
         try{
-            const res = await axios.get('http://localhost:5000/api/adds');
+            const res = await axios.get('https://floating-chamber-63070.herokuapp.com/api/adds');
             dispatch({
               type: GET_ADD,
               payload: res.data
@@ -47,7 +47,7 @@ const AddState=(props)=>{
           };
       
           try {
-            const res = await axios.post('http://localhost:5000/api/adds', add, config);
+            const res = await axios.post('https://floating-chamber-63070.herokuapp.com/api/adds', add, config);
       
             dispatch({
               type: POST_ADD,
@@ -63,7 +63,7 @@ const AddState=(props)=>{
 
     const deleteAdd=async (id)=>{
         try{
-        await axios.delete(`http://localhost:5000/api/adds/${id}`);
+        await axios.delete(`https://floating-chamber-63070.herokuapp.com/api/adds/${id}`);
           dispatch({type:DELETE_ADD,payload:id});
         }
         catch(err)
@@ -81,7 +81,7 @@ const AddState=(props)=>{
       
           try {
             const res = await axios.put(
-              `http://localhost:5000/api/adds/${add._id}`,
+              `https://floating-chamber-63070.herokuapp.com/api/adds/${add._id}`,
               add,
               config
             );

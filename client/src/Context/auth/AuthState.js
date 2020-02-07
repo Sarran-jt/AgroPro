@@ -33,7 +33,7 @@ const AuthState = props => {
     }
 
     try {
-      const res = await axios.get('http://localhost:5000/api/auth');
+      const res = await axios.get('https://floating-chamber-63070.herokuapp.com/api/auth');
 
       dispatch({
         type: USER_LOADED,
@@ -53,7 +53,7 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/users', formData, config);
+      const res = await axios.post('https://floating-chamber-63070.herokuapp.com/api/users', formData, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -78,7 +78,7 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth', formData, config);
+      const res = await axios.post('https://floating-chamber-63070.herokuapp.com/api/auth', formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,
@@ -111,7 +111,7 @@ const AuthState = props => {
     try {
       console.log(user);
       const res = await axios.put(
-        `http://localhost:5000/api/users/${user._id}`,
+        `sber-63070.herokuapp.com/api/users/${user._id}`,
         user,
         config
       );

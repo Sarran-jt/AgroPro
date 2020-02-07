@@ -32,7 +32,7 @@ const PostState = props => {
     // GET Posts Method
     const getPosts = async () => {
         try {
-          const res = await axios.get('http://localhost:5000/api/forum');
+          const res = await axios.get('https://floating-chamber-63070.herokuapp.com/api/forum');
           dispatch({
             type: GET_POSTS,
             payload: res.data
@@ -55,7 +55,7 @@ const PostState = props => {
         };
         console.log(post);
         try {
-          const res = await axios.post('http://localhost:5000/api/forum', post, config);
+          const res = await axios.post('https://floating-chamber-63070.herokuapp.com/api/forum', post, config);
     
           dispatch({
             type: ADD_POST,
@@ -80,7 +80,7 @@ const PostState = props => {
     
         try {
           const res = await axios.put(
-            `http://localhost:5000/api/forum/${post._id}`,
+            `https://floating-chamber-63070.herokuapp.com/api/forum/${post._id}`,
             post,
             config
           );
@@ -100,7 +100,7 @@ const PostState = props => {
       // DELETE Post Method
       const deletePost=async (id)=>{
         try{
-        await axios.delete(`http://localhost:5000/api/forum/${id}`);
+        await axios.delete(`https://floating-chamber-63070.herokuapp.com/api/forum/${id}`);
           dispatch({type:DELETE_POST,payload:id});
         }
         catch(err)
@@ -112,7 +112,7 @@ const PostState = props => {
         // GET Comments Method
 
         const getComment= async id =>{
-          const res=await axios.get(`http://localhost:5000/api/forum/${id}/comments`);
+          const res=await axios.get(`https://floating-chamber-63070.herokuapp.com/api/forum/${id}/comments`);
           dispatch({
             type:GET_COMMENTS,
             payload:res.data
@@ -126,7 +126,7 @@ const PostState = props => {
               }
             };
             try{
-              const res = await axios.post(`http://localhost:5000/api/forum/${id}/comments`, comment, config);
+              const res = await axios.post(`https://floating-chamber-63070.herokuapp.com/api/forum/${id}/comments`, comment, config);
               dispatch({
                 type:ADD_COMMENT,
                 payload:res.data
@@ -144,7 +144,7 @@ const PostState = props => {
         // DELETE Comment Method
         const deleteComment=async (id) =>{
           try{
-          await axios.delete(`http://localhost:5000/api/forum/comments/${id}`);
+          await axios.delete(`https://floating-chamber-63070.herokuapp.com/api/forum/comments/${id}`);
             dispatch({type:DELETE_COMMENT,payload:id});
           }
           catch(err)

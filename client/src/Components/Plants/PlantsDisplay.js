@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const PlantsDisplay = (props) => {
     const [plants,setPlants] = useState([]);
     const getPlants = async () =>{
-        const res = await axios.get('http://localhost:5000/api/plants');
+        const res = await axios.get('https://floating-chamber-63070.herokuapp.com/api/plants');
         setPlants(res.data);
     }
     useEffect( () => {
