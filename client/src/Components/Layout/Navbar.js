@@ -79,7 +79,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <nav className="navbar navbar-light custom-navbar">
+            <nav className="navbar custom-navbar">
                 <div className="container">
                 <Link className="navbar-brand" to='/'>AgroPro</Link>
 

@@ -1,6 +1,7 @@
 /*eslint-disable */
 import React,{useContext,useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Spinner from '../Layout/Spinner';
 import AddContext from '../../Context/adds/addContext';
 
 const Ads = () => {
@@ -11,6 +12,10 @@ const Ads = () => {
         getAdds();
     },[]);
 
+    if(loading){
+        return(<Spinner />)
+    }
+    else{
     return (
         <div>
             <div className="container"> 
@@ -42,6 +47,7 @@ const Ads = () => {
             </div>
         </div>
     )
+}
 }
 
 export default Ads

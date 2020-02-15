@@ -93,7 +93,7 @@ const ForumItem = (props) => {
                     </div>
                     {comments.map(comment => (
                     <div className="media mb-4">
-                    <img className="d-flex mr-3 rounded-circle" src={user.img} width="50px" height="50px" alt=""></img>
+                    <img className="d-flex mr-3 rounded-circle" src="http://cdn.onlinewebfonts.com/svg/img_568657.png" width="50px" height="50px" alt=""></img>
                     <div className="media-body">
                         <h5 className="mt-0"> {comment.userName} </h5>
                         {user && user._id === comment.user && commentLinks(comment)}
