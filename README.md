@@ -7,5 +7,8 @@ React-NodeJS based Project on Agriculture.
 3. npm i
 4. cd ..
 
-#To Run
+# To Run
 1. npm run dev
+
+# Deployed at
+(agropro.netlify.com)
