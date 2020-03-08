@@ -11,4 +11,4 @@ React-NodeJS based Project on Agriculture.
 1. npm run dev
 
 # Deployed at
-http://agropro.netlify.com
+http://agroproo.herokuapp.com/
